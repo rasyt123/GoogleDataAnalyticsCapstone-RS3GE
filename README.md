@@ -1,4 +1,4 @@
-# GoogleDataAnalyticsCapstone-RS3GE
+# Google Data Analytics Capstone-RS3GE
 Google Analytics Capstone Project
 
 
