@@ -1,5 +1,6 @@
 # Google Data Analytics Capstone-RS3GE
 Google Analytics Capstone Project
+By Justin Y
 
 # Introduction
 
