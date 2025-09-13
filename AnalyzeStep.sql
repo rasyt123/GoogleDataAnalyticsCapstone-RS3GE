@@ -23,6 +23,19 @@ SELECT
 FROM `runescapegeproj.rs3ge.rs3_filtered_data`;
 
 
+#Check if there are any outliers in day return
+SELECT
+ SUM(CASE WHEN day_return >= 1 THEN 1 ELSE 0 END) as total_return_outliers
+FROM temp_returns;
+
+#Check if there are outliers in volume and ID mismatches
+SELECT 
+  SUM(CASE WHEN VOLUME >= 100 THEN 1 ELSE 0 END) as total_volume_outliers,
+  SUM(CASE WHEN Name_ID != ID THEN 1 ELSE 0 END) as total_id_mismatches,
+
+ FROM `runescapegeproj.rs3ge.rs3_filtered_data`;
+
+
 # This is to calculate the STANDARD DEVIATION OF PERCENTAGE RETURNS
 SELECT
   dev.Name_ID, SQRT(AVG(dev.ddiff)) as sd
@@ -59,19 +72,25 @@ ORDER BY avgdatareturns DESC;
 
 #Rank by most expensive to least expensive based on average pricing 
 SELECT 
- Name, Name_ID, AVG(price) as priceavg
+ Name, Name_ID, AVG(price) as priceavg, MAX(price) - MIN(price) as max_price_diff
 FROM temp_returns 
 GROUP BY Name, Name_ID
 ORDER BY priceavg DESC;
 
 
+#Cumulative percent returns 
+SELECT 
+Name_ID, Name, (EXP(SUM(LOG(1 + day_return))) - 1) * 100 AS cumulative_return 
+FROM temp_returns GROUP BY Name, Name_ID;
 
-
-
-
-
-
-
+# Get he number of positive days
+#and Get the number of negative days 
+SELECT 
+  Name_ID,
+  SUM(CASE WHEN day_return > 0 THEN 1 ELSE 0 END) AS positive_days,
+  SUM(CASE WHEN day_return < 0 THEN 1 ELSE 0 END) AS negative_days
+FROM temp_returns
+GROUP BY Name_ID;
 
 
 
