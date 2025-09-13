@@ -32,7 +32,7 @@ There are a few fundamental steps to cleaning and processing the data once you'v
 
 
 # Analyze
-To find out which 
+To see which products were worth buying, I created a temporary table holding the calculations of all the daily percent changes of the price as daily_returns. This would allow me to calculate the standard deviation on price returns, which could show us how much products were flucuating within 
 
 
 
