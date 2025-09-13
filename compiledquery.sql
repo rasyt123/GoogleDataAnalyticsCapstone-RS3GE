@@ -171,12 +171,3 @@ SELECT
   SUM(CASE WHEN day_return < 0 THEN 1 ELSE 0 END) AS negative_days
 FROM temp_returns
 GROUP BY Name_ID;
-
-
-
-
-
-
-
-
-
