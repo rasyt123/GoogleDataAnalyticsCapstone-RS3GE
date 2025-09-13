@@ -1,5 +1,5 @@
 # Google Data Analytics Capstone-RS3GE
-Google Analytics Capstone Project
+Google Analytics Capstone Project (SQl, Tableau)
 By Justin Y
 
 # Introduction
@@ -33,22 +33,18 @@ There are a few fundamental steps to cleaning and processing the data once you'v
 
 
 # Analyze
-To see which products were worth buying, I created a temporary table holding the calculations of all the daily percent changes of the price as daily_returns. This would allow me to calculate the standard deviation on price returns, which could show us how much products were flucuating, but also basic summary statistics (average, min, max). Being able to know the standard deviation can tell you whether the spread of change was big, small, or even negligible. I also calculated the amount of items that were sold within those 3 items to get an idea of the demand. On top of that, I
+To see which products were worth buying, I created a temporary table holding the calculations of all the daily percent changes of the price as daily_returns. This would allow me to calculate the standard deviation on price returns, which could show us how much products were flucuating, but also basic summary statistics (average, min, max). Being able to know the standard deviation can tell you whether the spread of change was big, small, or even negligible. I also calculated the amount of items that were sold within those 3 items to get an idea of the demand. On top of that,
 the total net percentage return on each of the 9 items was something I needed to take into account.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# Share
+I created a dashboard in Tableau monitoring the calculations I described earlier. What I found was that over this three month period, almost all of the items were non-volatile. This is due to the fact that the SD in percentages (SD on returns) was actually extremely small over the entire board. Furthermore, the average price change percentage wise on a day-to-day basis was extremely small. However, we found a couple discrepancies in demand for products. The virtus robes were sold the most and had the highest cumulative percentage changes while being non-volatile. Ranked second is the third age robe top. The robe top had one of the lower quantities of sales at around 700 but still was non-volatile with positive price returns. 
 
 
 ![Dashboard preview](https://public.tableau.com/static/images/rs/rs3geexpensiveitems/Dashboard1/1.png)
+
+
+
+# Ask
+I actually recommend the playerbase to purchase the top 3 items from this dashboard in terms of cumulative percentage rows because all the items actually have low volatility. The virtus robe top gets traded the most. Even though all the items can be ranked by volatiltiy their differences across all the items is negligible, so looking at quantity sold, net profit, and average percent changes would be a good idea to decide whether or not to purchase them.
