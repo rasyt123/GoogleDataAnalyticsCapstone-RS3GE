@@ -45,5 +45,16 @@ WHERE EXTRACT(YEAR FROM DATE) = 2024 AND EXTRACT(MONTH FROM DATE) >= 6 and EXTRA
 ORDER BY date DESC;
 
 
+# Check for negative prices
+SELECT
+ COUNT(price) as numnegative
+ FROM `runescapegeproj.rs3ge.rs3_filtered_data`
+ WHERE price < 0;
 
+
+# Make sure that there are 9 names in the first place that are associated with this analysis
+SELECT 
+  Name_ID, Name 
+FROM `runescapegeproj.rs3ge.rs3_filtered_data`
+GROUP BY Name_ID, Name;
 
