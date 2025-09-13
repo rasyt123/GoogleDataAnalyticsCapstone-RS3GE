@@ -33,7 +33,8 @@ There are a few fundamental steps to cleaning and processing the data once you'v
 
 
 # Analyze
-To see which products were worth buying, I created a temporary table holding the calculations of all the daily percent changes of the price as daily_returns. This would allow me to calculate the standard deviation on price returns, which could show us how much products were flucuating within 
+To see which products were worth buying, I created a temporary table holding the calculations of all the daily percent changes of the price as daily_returns. This would allow me to calculate the standard deviation on price returns, which could show us how much products were flucuating, but also basic summary statistics (average, min, max). Being able to know the standard deviation can tell you whether the spread of change was big, small, or even negligible. I also calculated the amount of items that were sold within those 3 items to get an idea of the demand. On top of that, I
+the total net percentage return on each of the 9 items was something I needed to take into account.
 
 
 
