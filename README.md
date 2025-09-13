@@ -46,5 +46,5 @@ I created a dashboard in Tableau monitoring the calculations I described earlier
 
 
 
-# Ask
-I actually recommend the playerbase to purchase the top 3 items from this dashboard in terms of cumulative percentage rows because all the items actually have low volatility. The virtus robe top gets traded the most. Even though all the items can be ranked by volatiltiy their differences across all the items is negligible, so looking at quantity sold, net profit, and average percent changes would be a good idea to decide whether or not to purchase them.
+# Conclusion / Share
+I actually recommend the playerbase to purchase the top 3 items from this dashboard in terms of cumulative percentage because all the items actually have low volatility. The virtus robe top gets traded the most. They still have relatively high demand. Even though all the items can be ranked by volatiltiy their differences across all the items is negligible, so looking at quantity sold, net profit, and average percent changes would be a good idea to decide whether or not to purchase them. Overall, this project was fairly difficult due to the amount of time it took to search for the data. It was hard for me to create the dashboard and find the specific tools needed to decorate and outline it. I still had fun though.
